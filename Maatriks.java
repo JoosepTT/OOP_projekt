@@ -65,21 +65,19 @@ public abstract class Maatriks {
             System.out.println();
             kuvaMaatriks2();
 
-            int eventNum = new Random().nextInt(3) + 1;
-            executeEvent(eventNum);
-
-            int sihtmark = new Random().nextInt(16) + 3;
-            System.out.println("Sinu sihtmärk: " + sihtmark);
+            if (andmeMaatriks[asukohtX][asukohtY] == 1 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
+                andmeMaatriks[asukohtX][asukohtY] = 0;
+                int eventNum = new Random().nextInt(4) + 1;
+                executeEvent(eventNum);
+            }
 
             System.out.println("Kuhu soovid liikuda? (w - üles, s - alla, a - vasakule, d - paremale)");
             char liigu = scanner.next().charAt(0);
             if (liigu == 'q') {
-                System.out.println("Mäng lõpetatud.");
-                scanner.close();
+                System.out.println("Mäng läbi!");
                 break;
-            } else {
-                liiguta(ekraaniMaatriks, liigu);
             }
+            liiguta(ekraaniMaatriks, liigu);
         }
         System.out.println("Mäng läbi! Sinu lõppskoor: " + skoor);
     }

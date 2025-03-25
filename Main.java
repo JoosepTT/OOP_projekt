@@ -15,7 +15,6 @@ public class Main {
             System.out.println("Vali tegevus: 1 - Alusta mängu, 2 - Vaata skooritabelit, 3 - Välju");
             int action = scanner.nextInt();
             scanner.nextLine();
-
             switch (action) {
                 case 1:
                     alustaMangu(scanner);
@@ -25,11 +24,11 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Mäng lõpetatud.");
+                    scanner.close();
                     return;
                 default:
                     System.out.println("Vale valik, proovi uuesti.");
             }
-            scanner.close();
         }
     }
 

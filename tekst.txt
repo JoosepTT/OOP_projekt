@@ -1,0 +1,72 @@
+Etapid
+Maatriksi loomine (class Maatriks2)
+Liikumine (meetod)
+Loe/kirjuta faili (meetod mainis?)
+Täring2 (klass)
+Sündmused -> raskusastmed (alamklassid) -> meetodid
+
+
+
+
+Nimi
+main()
+
+Class Täring2
+random(1,6)
+Täringud 1-6
+4 max 24
+12-24
+
+8-24
+1-12 fail, 12-24 võit
+16-24
+
+Class LooMaatriks
+Random
+Mängu käivitamisel loetakse failis sisu programmi ja mängija sisestab nime
+Tegevusvariandid: Alusta mängu, skoor (prindib tabeli), exit;
+
+
+
+
+
+Mängu alustamine:
+Mängija valib raskusastme
+O O O O O O
+O O O O O O
+O O M X X O
+O O O O X O
+O O O O O O
+O O O O O O
+
+Prindib välja kaardi ennem igat käiku, pärast liikumist muudab käidud kohta mingi muu sümboliga
+Väljastab, mitu sündmust (sündmuste numbreid) maatriksis on.
+
+
+_________________________________
+
+Hetkeskoor ; elud
+Prindib maatriksi
+Kuvatakse sündmus (mis juhtus?)
+Target (arv)
+Kasutajasisend: _1_
+Täring2 1: 3
+Täring2 2: 5
+Tulemus: 8
+<Vastus>
+“Kuhu soovid liikuda”
+Mäng2 on läbi
+
+_________________________________
+
+Tekstifaili kirjutamine
+Nimi, skoor
+Sortib skoori järgi
+
+(pea klass ja extendidega või 1 klass selles funktsioonidena sündmused)
+Class Sundmused
+
+
+Class Funktsioon1
+Nimi =
+Raskusate =
