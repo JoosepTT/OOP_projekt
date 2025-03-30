@@ -164,8 +164,8 @@ public class Taring {
                 puudu++;
             }
         }
-        if (puudu == 1 && Collections.frequency(lahendid, '★') >= 2) {
-            System.out.println("Sul on kaks [★] sümbolit! Kas soovid neid kasutada puuduoleva sümboli asendamiseks? (jah/ei)");
+        if (puudu == 1 && Collections.frequency(lahendid, '☘') >= 2) {
+            System.out.println("Sul on kaks [☘] sümbolit! Kas soovid neid kasutada puuduoleva sümboli asendamiseks? (jah/ei)");
             Scanner scanner = new Scanner(System.in);
             String vastus = scanner.nextLine().trim().toLowerCase();
             return vastus.equals("jah") || vastus.equals("j");
