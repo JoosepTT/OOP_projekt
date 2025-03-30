@@ -1,3 +1,6 @@
-Joosep Tiger Tilgar ; 69
-Lauri Laud ; 71
-Keegi Teine ; 0
+joosep tiger tilgar ; 69
+lauri laud ; 71
+keegi teine ; 1
+anna mets ; 50
+janek sild ; 11
+karl kuppel ; 101
