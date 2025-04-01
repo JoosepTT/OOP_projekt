@@ -8,8 +8,9 @@ public abstract class Maatriks {
     protected int sundmusteProtsent;
     protected static int asukohtX;
     protected static int asukohtY;
-    protected int skoor = 0;
-    protected int elud = 3;
+    protected static int skoor = 0;
+    protected static int elud = 3;
+    protected int eludMax = 3;
     private static final char mängija = 'M';
     private static final char käidud = 'X';
 
@@ -35,7 +36,6 @@ public abstract class Maatriks {
         asukohtX = suvaline.nextInt(size);
         asukohtY = suvaline.nextInt(size);
         ekraaniMaatriks[asukohtX][asukohtY] = 'M';
-
     }
 
     // kasutajale maatiksi kuvamine
@@ -48,38 +48,39 @@ public abstract class Maatriks {
         }
     }
 
-    public void kuvaMaatriks2() {
-        for (int[] rida : andmeMaatriks) {
-            for (int element : rida) {
-                System.out.print(element + " ");
-            }
-            System.out.println();
-        }
-    }
-
     // mängutsükkel
-    public void manguTsukkel(Scanner scanner) {
+    public void manguTsukkel(Scanner scanner, String mangijaNimi) throws InterruptedException {
         while (elud > 0) {
-            System.out.println("Hetkeskoor: " + skoor + "  Elud: " + "| ".repeat(elud));
+            System.out.println("--------------------------------------------------------");
+
+            Thread.sleep(500);
+            System.out.println("Hetkeskoor: " + skoor + "  Elud: " + "♥ ".repeat(elud) + "♡".repeat(eludMax - elud) + "\n");
+            Thread.sleep(500);
             kuvaMaatriks();
             System.out.println();
-            kuvaMaatriks2();
-
-            if (andmeMaatriks[asukohtX][asukohtY] == 1 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
-                andmeMaatriks[asukohtX][asukohtY] = 0;
-                int eventNum = new Random().nextInt(4) + 1;
-                executeEvent(eventNum);
-            }
 
             System.out.println("Kuhu soovid liikuda? (w - üles, s - alla, a - vasakule, d - paremale)");
             char liigu = scanner.next().charAt(0);
             if (liigu == 'q') {
-                System.out.println("Mäng läbi!");
+                System.out.println("Mäng lõpetatud.");
+                Main.uuendaSkoori(mangijaNimi, skoor);
                 break;
             }
             liiguta(ekraaniMaatriks, liigu);
+
+            // sündmus käivitatakse, kui mängija asukohal on märgitud peidetud maatriskis "1" ehk sündmus
+            if (andmeMaatriks[asukohtX][asukohtY] == 1 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
+                andmeMaatriks[asukohtX][asukohtY] = 0;
+                int eventNum = new Random().nextInt(10) + 1;
+                executeEvent(eventNum);
+            } else if (andmeMaatriks[asukohtX][asukohtY] == 0 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
+                Sundmused.juhusundmus();
+            }
+
         }
-        System.out.println("Mäng läbi! Sinu lõppskoor: " + skoor);
+        System.out.println("\nMäng läbi! Sinu lõppskoor: " + skoor);
+        Main.uuendaSkoori(mangijaNimi, skoor);
+
     }
 
     public static void liiguta(char[][] kaart, char suund) {
@@ -130,6 +131,7 @@ public abstract class Maatriks {
         return x >= 0 && x < kaart.length && y >= 0 && y < kaart[0].length;
     }
 
-    public abstract void executeEvent(int eventNum);
+    // meetod sobiva sündmuse käivitamiseks
+    public abstract void executeEvent(int eventNum) throws InterruptedException;
 
 }
