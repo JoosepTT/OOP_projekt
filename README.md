@@ -1,5 +1,5 @@
 # OOP_projekt: "Räbaldunud Rändur"
-projekti autorid: Joosep Tiger Tilgar, Lauri Laud
+*projekti autorid: Joosep Tiger Tilgar ja Lauri Laud*
 
 
 ## Projekti kirjeldus
