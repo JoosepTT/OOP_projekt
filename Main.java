@@ -34,9 +34,40 @@ public class Main {
         }
     }
 
-    // Prindib suurelt mängu pealkirja (pole kujundatud)
-    public static void algus() {
-        System.out.println("<Ardejaht>");
+    // Prindib suurelt mängu pealkirja
+    public static void algus() throws InterruptedException {
+        String[] pealkiri = {
+                "║                                                                                                         ",
+                "║                                                                                                         ",
+                "║            ██╗  ██╗                                                                                     ",
+                "║  ██████╗    █████╗   ██████╗    █████╗   ██╗       ██████╗   ██╗   ██╗  ███╗   ██╗  ██╗   ██╗  ██████╗  ",
+                "║  ██╔══██╗  ██╔══██╗  ██╔══██╗  ██╔══██╗  ██║       ██╔══██╗  ██║   ██║  ████╗  ██║  ██║   ██║  ██╔══██╗ ",
+                "║  ██████╔╝  ███████║  ███████║  ███████║  ██║       ██║  ██║  ██║   ██║  ██╔██╗ ██║  ██║   ██║  ██║  ██║ ",
+                "║  ██╔══██╗  ██╔══██║  ██╔══██║  ██╔══██║  ██║       ██║  ██║  ██║   ██║  ██║╚██╗██║  ██║   ██║  ██║  ██║ ",
+                "║  ██║  ██║  ██║  ██║  ██████╔╝  ██║  ██║  ███████╗  ██████╔╝  ╚██████╔╝  ██║ ╚████║  ╚██████╔╝  ██████╔╝ ",
+                "║  ╚═╝  ╚═╝  ╚═╝  ╚═╝  ╚═════╝   ╚═╝  ╚═╝  ╚══════╝  ╚═════╝    ╚═════╝   ╚═╝  ╚═══╝   ╚═════╝   ╚═════╝  ",
+                "║                                                                                   ",
+                "║                               ██╗  ██╗                                            ",
+                "║                     ██████╗    █████╗   ███╗   ██╗  ██████╗   ██╗   ██╗  ██████╗  ",
+                "║                     ██╔══██╗  ██╔══██╗  ████╗  ██║  ██╔══██╗  ██║   ██║  ██╔══██╗ ",
+                "║                     ██████╔╝  ███████║  ██╔██╗ ██║  ██║  ██║  ██║   ██║  ██████╔╝ ",
+                "║                     ██╔══██╗  ██╔══██║  ██║╚██╗██║  ██║  ██║  ██║   ██║  ██╔══██╗ ",
+                "║                     ██║  ██║  ██║  ██║  ██║ ╚████║  ██████╔╝  ╚██████╔╝  ██║  ██║ ",
+                "║                     ╚═╝  ╚═╝  ╚═╝  ╚═╝  ╚═╝  ╚═══╝  ╚═════╝    ╚═════╝   ╚═╝  ╚═╝ ",
+                "║                                                                                   "
+        };
+
+        for (String rida : pealkiri) {
+            System.out.println(rida);
+            Thread.sleep(100);
+        }
+
+        System.out.print("╚");
+        int reapikkus = 70;
+        for (int i = 0; i < reapikkus; i++) {
+            System.out.print("═");
+            Thread.sleep(5);
+        }
         System.out.println();
     }
 
@@ -70,16 +101,16 @@ public class Main {
 
         switch (valik) {
             case 1:
-                mang = new Raskustase_1(kordajad[0]);
+                mang = new Raskustase_1();
                 break;
             case 2:
-                mang = new Raskustase_2(kordajad[1]);
+                mang = new Raskustase_2();
                 break;
             case 3:
-                mang = new Raskustase_3(kordajad[2]);
+                mang = new Raskustase_3();
                 break;
             default:
-                mang = new Raskustase_1(kordajad[0]); // vaikeväärtus
+                mang = new Raskustase_1(); // vaikeväärtus
         }
 
         System.out.println("\nTere tulemast mängulauale!\n");
@@ -88,14 +119,14 @@ public class Main {
 
     // skooritabeli kuvamine
     private static void kuvaSkoorid() {
-        System.out.println("\nSkooritabel: -----------------");
+        System.out.println("\nSkooritabel: ══════════════════════════════");
 
         int number = 1;
         for (Map.Entry<String, Integer> sissekanne : skoorid.entrySet()) {
             System.out.println(number + ". " + sissekanne.getKey() + " - " + sissekanne.getValue());
             number++;
         }
-        System.out.println("______________________________\n");
+        System.out.println("═══════════════════════════════════════════\n");
     }
 
     // nimede skooride järgi järjestamine
