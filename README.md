@@ -37,8 +37,10 @@ Suurim murekoht oli ilmselt tagantjärgi tagasivaadates koodide ühendamisel, mi
 ## Hinnang tööle
 ### Lauri:
 - Mina olen väga rahul. Suhteliselt huvitav ja äge asi sai lõpuks valmis.
+- 
 ### Joosep:
-- Projekti erinevate osade ja detailide kokku panemine oli ilmselgelt kõige põnevam osa protsessit. Senise töö põhjal tuli samuti mitmeid uusi edasiarnedusmõtteid, kuidas mäng järgmisele tasmele viia.
+- Projekti erinevate osade ja detailide kokku panemine oli ilmselgelt kõige põnevam osa protsessit. Senise töö põhjal tuli samuti mitmeid uusi edasiarnedusmõtteid, kuidas mäng järgmisele tasmele viia. Omavaheline koostöö sujus väga hästi ja olime alati mõtetega ühel lainel, mis tegi arendustöö väga intuitiivseks.
+
 
 ## Programmi testimine
 Peamiselt mängisime mängu ise korduvalt läbi, et testida parnadatud kohti ja vaadata et iga osa ikka töötaks. Kõige närvesöövam oli täringumehhanikate ja meetodite omavahelise suhtluse korraldmine.
