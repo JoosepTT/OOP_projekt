@@ -9,11 +9,11 @@ Projekti tegemise protsessi kirjeldus: saime tegime üks nädalavahetus kõne ar
 
 Rühmaliikmete panus:
 
-Tegemise mured:
+Tegemise mured: Üks murekoht oli koodide ühendamisel. Ühendamisel oli vaja mitmeid osasid muuta ja katsetamise läbi proovida, kuidas mingi osa töötab ja mida vaja veel muuta on.
 
-Hinnang tööle:
+Hinnang tööle: Lauri - Mina olen väga rahul. Suhteliselt huvitav ja äge asi sai lõpuks valmis.
 
-Programmi testimine: 
+Programmi testimine: Peamiselt mängisime ise mängu läbi, et vaadata et iga osa ikka töötaks
 
 
 ![Screenshot 2025-04-02 200159](https://github.com/user-attachments/assets/a384f99e-0bdd-4cdb-ae3d-6f050929b849)
