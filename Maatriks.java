@@ -71,7 +71,7 @@ public abstract class Maatriks {
             // sündmus käivitatakse, kui mängija asukohal on märgitud peidetud maatriskis "1" ehk sündmus
             if (andmeMaatriks[asukohtX][asukohtY] == 1 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
                 andmeMaatriks[asukohtX][asukohtY] = 0;
-                int eventNum = new Random().nextInt(10) + 1;
+                int eventNum = new Random().nextInt(14) + 1;
                 executeEvent(eventNum);
             } else if (andmeMaatriks[asukohtX][asukohtY] == 0 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
                 Sundmused.juhusundmus();
@@ -84,12 +84,7 @@ public abstract class Maatriks {
     }
 
     public static void liiguta(char[][] kaart, char suund) {
-        /**
-         * Kontrollib kas liikumine on sobiv (ei liigu üle kaardi piiride), ja kui kasutaja sisestus
-         * on õige (w,s,a,d) siis liigutab mängijat ühe võrra soovitud suunas.
-         * @param kaart antud kaart.
-         * @param suund kasutaja sisestus (w,s,a,d)
-         */
+        //Liigutab mängijat sisestatud suunas
         int uusX = asukohtX, uusY = asukohtY;
 
         switch (suund) {
@@ -121,13 +116,7 @@ public abstract class Maatriks {
     }
 
     public static boolean onSobivLiikumine(char[][] kaart, int x, int y) {
-        /**
-         * Kontrollib kas liikumine on sobiv (ei liigu üle kaardi piiride).
-         * @param kaart antud kaart.
-         * @param x suund vasakult-paremale
-         * @param y suund ülevalt-alla
-         * @return tagastab true, kui liikumine õige ja false, kui liikumine on vale.
-         */
+        // kontrollib, kas liikumine jääb kaardi mõõtmete sisse
         return x >= 0 && x < kaart.length && y >= 0 && y < kaart[0].length;
     }
 
