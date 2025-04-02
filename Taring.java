@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class Taring {
@@ -49,12 +50,14 @@ public class Taring {
                 }
             }
 
+            kuvaTäringud(täringud);
+
             // Kontrollime, kas summa on sobivas vahemikus
             int summa = täringud.stream().mapToInt(Integer::intValue).sum();
             System.out.println("Täringute summa: " + summa);
 
             if (summa >= aluminePiir && summa <= üleminePiir) {
-                System.out.println("Õnnestus! Summa on õiges vahemikus (" + minSumma + " - " + maxSumma + ")");
+                System.out.println("Õnnestus! Summa on õiges vahemikus (" + aluminePiir + " - " + üleminePiir + ")");
                 return 1;
             } else if (kord < veeretuskordadeArv) {
                 System.out.println("Summa ei sobi. Proovi veel!");
