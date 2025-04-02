@@ -1,3 +1,4 @@
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -51,36 +52,68 @@ public abstract class Maatriks {
     // mängutsükkel
     public void manguTsukkel(Scanner scanner, String mangijaNimi) throws InterruptedException {
         while (elud > 0) {
-            System.out.println("--------------------------------------------------------");
-
+            System.out.println("══════════════════════════════════════════════════════════════════════════════════");
             Thread.sleep(500);
             System.out.println("Hetkeskoor: " + skoor + "  Elud: " + "♥ ".repeat(elud) + "♡".repeat(eludMax - elud) + "\n");
+            System.out.println("Avastamata sündmuste arv: " + sündmusteArv());
             Thread.sleep(500);
             kuvaMaatriks();
             System.out.println();
 
-            System.out.println("Kuhu soovid liikuda? (w - üles, s - alla, a - vasakule, d - paremale)");
+            if (kasMängOnLäbi()) {
+                System.out.println("Kõik kohad on avastatud! Mäng läbi!");
+                break;
+            }
+
+            System.out.println("Kuhu soovid liikuda? (w - üles, s - alla, a - vasakule, d - paremale) või vajuta q - mängu lõpetamiseks");
             char liigu = scanner.next().charAt(0);
             if (liigu == 'q') {
-                System.out.println("Mäng lõpetatud.");
+                System.out.println("\nMäng läbi! Sinu lõppskoor: " + skoor);
                 Main.uuendaSkoori(mangijaNimi, skoor);
                 break;
             }
             liiguta(ekraaniMaatriks, liigu);
+            System.out.println("══════════════════════════════════════════════════════════════════════════════════");
 
             // sündmus käivitatakse, kui mängija asukohal on märgitud peidetud maatriskis "1" ehk sündmus
             if (andmeMaatriks[asukohtX][asukohtY] == 1 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
-                andmeMaatriks[asukohtX][asukohtY] = 0;
+                andmeMaatriks[asukohtX][asukohtY] = 2;
                 int eventNum = new Random().nextInt(14) + 1;
                 executeEvent(eventNum);
             } else if (andmeMaatriks[asukohtX][asukohtY] == 0 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
+                andmeMaatriks[asukohtX][asukohtY] = 2;
                 Sundmused.juhusundmus();
             }
+            System.out.println();
 
         }
         System.out.println("\nMäng läbi! Sinu lõppskoor: " + skoor);
         Main.uuendaSkoori(mangijaNimi, skoor);
+    }
 
+    private boolean kasMängOnLäbi() {
+        // kontrollib mängulaual olevate mittekäidud kohtade arvu
+        int mitteX = 0;
+        for (char[] rida : ekraaniMaatriks) {
+            for (char element : rida) {
+                if (element != 'X') {
+                    mitteX++;
+                }
+            }
+        }
+        return mitteX == 1;
+    }
+
+    private int sündmusteArv(){
+        int arv = 0;
+        for(int[] rida : andmeMaatriks) {
+            for(int element : rida) {
+                if (element == 1) {
+                    arv++;
+                }
+            }
+        }
+        return arv;
     }
 
     public static void liiguta(char[][] kaart, char suund) {

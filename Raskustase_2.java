@@ -1,3 +1,4 @@
+
 public class Raskustase_2 extends Maatriks {
     private Sundmused sundmused = new Sundmused();
 

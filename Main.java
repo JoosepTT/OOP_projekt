@@ -34,9 +34,40 @@ public class Main {
         }
     }
 
-    // Prindib suurelt mängu pealkirja (pole kujundatud)
-    public static void algus() {
-        System.out.println("<Ardejaht>");
+    // Prindib suurelt mängu pealkirja
+    public static void algus() throws InterruptedException {
+        String[] pealkiri = {
+                "║                                                                                                         ",
+                "║                                                                                                         ",
+                "║            ██╗  ██╗                                                                                     ",
+                "║  ██████╗    █████╗   ██████╗    █████╗   ██╗       ██████╗   ██╗   ██╗  ███╗   ██╗  ██╗   ██╗  ██████╗  ",
+                "║  ██╔══██╗  ██╔══██╗  ██╔══██╗  ██╔══██╗  ██║       ██╔══██╗  ██║   ██║  ████╗  ██║  ██║   ██║  ██╔══██╗ ",
+                "║  ██████╔╝  ███████║  ███████║  ███████║  ██║       ██║  ██║  ██║   ██║  ██╔██╗ ██║  ██║   ██║  ██║  ██║ ",
+                "║  ██╔══██╗  ██╔══██║  ██╔══██║  ██╔══██║  ██║       ██║  ██║  ██║   ██║  ██║╚██╗██║  ██║   ██║  ██║  ██║ ",
+                "║  ██║  ██║  ██║  ██║  ██████╔╝  ██║  ██║  ███████╗  ██████╔╝  ╚██████╔╝  ██║ ╚████║  ╚██████╔╝  ██████╔╝ ",
+                "║  ╚═╝  ╚═╝  ╚═╝  ╚═╝  ╚═════╝   ╚═╝  ╚═╝  ╚══════╝  ╚═════╝    ╚═════╝   ╚═╝  ╚═══╝   ╚═════╝   ╚═════╝  ",
+                "║                                                                                   ",
+                "║                               ██╗  ██╗                                            ",
+                "║                     ██████╗    █████╗   ███╗   ██╗  ██████╗   ██╗   ██╗  ██████╗  ",
+                "║                     ██╔══██╗  ██╔══██╗  ████╗  ██║  ██╔══██╗  ██║   ██║  ██╔══██╗ ",
+                "║                     ██████╔╝  ███████║  ██╔██╗ ██║  ██║  ██║  ██║   ██║  ██████╔╝ ",
+                "║                     ██╔══██╗  ██╔══██║  ██║╚██╗██║  ██║  ██║  ██║   ██║  ██╔══██╗ ",
+                "║                     ██║  ██║  ██║  ██║  ██║ ╚████║  ██████╔╝  ╚██████╔╝  ██║  ██║ ",
+                "║                     ╚═╝  ╚═╝  ╚═╝  ╚═╝  ╚═╝  ╚═══╝  ╚═════╝    ╚═════╝   ╚═╝  ╚═╝ ",
+                "║                                                                                   "
+        };
+
+        for (String rida : pealkiri) {
+            System.out.println(rida);
+            Thread.sleep(100);
+        }
+
+        System.out.print("╚");
+        int reapikkus = 70;
+        for (int i = 0; i < reapikkus; i++) {
+            System.out.print("═");
+            Thread.sleep(5);
+        }
         System.out.println();
     }
 
@@ -54,7 +85,6 @@ public class Main {
 
         // raskustaseme valimine
         int valik;
-        double[] kordajad = {1.0, 1.5, 2.0}; // skoorikordajad raskustasemete jaoks
 
         do {
             System.out.print("Vali raskustase (1 - Kerge, 2 - Keskmine, 3 - Raske): ");
@@ -88,14 +118,14 @@ public class Main {
 
     // skooritabeli kuvamine
     private static void kuvaSkoorid() {
-        System.out.println("\nSkooritabel: -----------------");
+        System.out.println("\nSkooritabel: ══════════════════════════════");
 
         int number = 1;
         for (Map.Entry<String, Integer> sissekanne : skoorid.entrySet()) {
             System.out.println(number + ". " + sissekanne.getKey() + " - " + sissekanne.getValue());
             number++;
         }
-        System.out.println("______________________________\n");
+        System.out.println("═══════════════════════════════════════════\n");
     }
 
     // nimede skooride järgi järjestamine
@@ -149,5 +179,4 @@ public class Main {
         int kõrgemSkoor = Math.max(skoorid.getOrDefault(mangijaNimi, 0), uusSkoor); // kui uus skoor on suurem kui praegune, siis uuendatakse mängija skoori
         skoorid.put(mangijaNimi, kõrgemSkoor);
     }
-
 }

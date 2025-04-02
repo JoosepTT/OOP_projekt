@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class Taring {
@@ -5,7 +6,7 @@ public class Taring {
     public static int veereta(int taringuteArv) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         Random suvaline = new Random();
-        int minSumma = taringuteArv * 1; // minimaalne täringutel saadav summa
+        int minSumma = taringuteArv; // minimaalne täringutel saadav summa
         int maxSumma = taringuteArv * 6; // maksimaalne täringutel saadav summa
 
         // Genereeritakse sihtvahemik
@@ -29,7 +30,7 @@ public class Taring {
             kuvaTäringud(täringud);
 
             // Küsitakse, kas kasutaja tahab täringuid uuesti veeretada
-            System.out.print("Sisesta täringute numbrid, mida uuesti veeretada (tühjaks jätmisel jäävad kõik samaks): ");
+            System.out.print("Sisesta täringute numbrid, mida uuesti veeretada (tühjaks jätmisel jäävad kõik samaks, sisesta tühikutega numbrid, nt: 1 3): ");
             String sisend = scanner.nextLine().trim();
 
             if (!sisend.isEmpty()) {
