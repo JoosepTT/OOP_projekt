@@ -21,7 +21,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nJäid seekord vastasele alla!");
+            System.out.println("\nJäid seekord vastasele alla!");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -60,7 +60,7 @@ public class Sundmused {
             System.out.println("\nPõgenesid edukalt!");
 
         } else {
-            System.out.print("\nJäid seekord vastasele alla!");
+            System.out.println("\nJäid seekord vastasele alla!");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -89,7 +89,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSisimas tahtsid sa nõiale vastu hakkata aga seekord jäi sul julgusest puudu.");
+            System.out.println("\nSisimas tahtsid sa nõiale vastu hakkata aga seekord jäi sul julgusest puudu.");
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
         }
@@ -113,7 +113,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSul läks varjualuse leidmisega liialt kaua aega ja su nahk kannatas happe vihma käes liiga kaua.");
+            System.out.println("\nSul läks varjualuse leidmisega liialt kaua aega ja su nahk kannatas happe vihma käes liiga kaua.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -156,7 +156,7 @@ public class Sundmused {
             System.out.println("\nViisid vanamehe tähelepanu mujale ja põgenesid majast!");
 
         } else {
-            System.out.print("\nSa kaotasid mängus vanamehele.");
+            System.out.println("\nSa kaotasid mängus vanamehele.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Maatriks.skoor -= võidupunktid * punktiKordaja;
@@ -183,7 +183,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSinusugune väike inimene ei saa kahe suure trolli vastu.");
+            System.out.println("\nSinusugune väike inimene ei saa kahe suure trolli vastu.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -310,7 +310,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nOma praeguses vormis on see võimatu, et sa vargale järgi jõuaksid. Peaksid rohkem trennile pühenduma.");
+            System.out.println("\nOma praeguses vormis on see võimatu, et sa vargale järgi jõuaksid. Peaksid rohkem trennile pühenduma.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Maatriks.skoor -= võidupunktid * punktiKordaja;
@@ -339,7 +339,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSa ei olnud piisavalt kiire ja pidid kannatama paari luukerede rünnakut ennem, kui sa pääsesid.");
+            System.out.println("\nSa ei olnud piisavalt kiire ja pidid kannatama paari luukerede rünnakut ennem, kui sa pääsesid.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -368,7 +368,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSul puudus piisaval hulgal intelligentsi, et midagi võimalikult kiiresti välja mõelda.");
+            System.out.println("\nSul puudus piisaval hulgal intelligentsi, et midagi võimalikult kiiresti välja mõelda.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -407,7 +407,7 @@ public class Sundmused {
             System.out.println("\nSa põgenesid kõrtsist.");
 
         } else {
-            System.out.print("\nSa ei julgenud vastu hakkata ja loovutasid osa oma kullast.");
+            System.out.println("\nSa ei julgenud vastu hakkata ja loovutasid osa oma kullast.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Maatriks.skoor -= võidupunktid * punktiKordaja;
@@ -444,7 +444,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSee supp mille sa kokku keetsid ei sobi isegi põranda pesemiseks ja sa vigastasid ennast selle tegemise käigus.");
+            System.out.println("\nSee supp mille sa kokku keetsid ei sobi isegi põranda pesemiseks ja sa vigastasid ennast selle tegemise käigus.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Thread.sleep(500);
@@ -476,7 +476,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nKaotasid vastasele haledalt.");
+            System.out.println("\nKaotasid vastasele haledalt.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Thread.sleep(500);

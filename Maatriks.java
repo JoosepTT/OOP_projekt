@@ -89,6 +89,7 @@ public abstract class Maatriks {
         }
         System.out.println("\nMäng läbi! Sinu lõppskoor: " + skoor);
         Main.uuendaSkoori(mangijaNimi, skoor);
+        elud = 3;
     }
 
     private boolean kasMängOnLäbi() {
