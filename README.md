@@ -10,7 +10,8 @@ Raskusastmete klassid 3tk: Need klassid annavad maatriks klassile, maatriksi suu
 Sundmused klass: Selles klassis on kõik sündmused nii need, mis vajavad kasutaja sisestustm kui ka need, mis on nii öelda täite sündmused, mis kasutaja siestust ei vaja.
 Taring klass: Selles klassis toimub kõik täringuga seotuv. Veeretatakse number ja ka sümbol täringuid. 
 
-Projekti tegemise protsessi kirjeldus: saime tegime üks nädalavahetus kõne arvutis. Rääkisime mis teha soovime ja panime algse plaani paika. Lisan algse plaani kritseldused siia faili alla. Panime paika ka, millal kohtume ja et teeme mõlemad sellel nädalavahetusel midagi juba ära. Siis teisipäeval saime kokku ja panime üksteise loodud koodid kokku, lihvisime buge ja seatsime järgmised plaanid.
+Projekti tegemise protsessi kirjeldus: tegime üks nädalavahetus arvutis kõne, sest Lauri oli Pärnus ja ei saanud kohapeal kokku saada. Rääkisime mis teha soovime ja panime algse plaani paika. Lisan algse plaani kritseldused siia faili alla. Panime paika ka, millal kohtume ja et teeme mõlemad sellel nädalavahetusel midagi juba ära. Siis teisipäeval saime kokku ja panime üksteise loodud koodid kokku, lihvisime buge ja seatsime järgmised plaanid.
+Kõigepealt sai meil valmis baas nagu klass main ja maatriks (muidugi tegime neis parandusi hiljem ja lisasime meetodeid), siis sai valmis täring ja kui juba mäng töötas siis lisasime sündmused, et mängus ka teha midagi oleks.
 
 Rühmaliikmete panus: Lauri - Main ja täringu klassis tegin parandusi ja kui lisasin midagi siis pigem midagi väikest. Maatriks, sundmused ja raskustasemete klassides panustasin rohkem, ajakulu arvan et võis jääda kuskile 16h kanti.
 
