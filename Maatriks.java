@@ -1,3 +1,4 @@
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -48,37 +49,16 @@ public abstract class Maatriks {
         }
     }
 
-    // peidetud maatriksi kuvamine
-    public void kuvaMaatriks2() {
-        for (int[] rida : andmeMaatriks) {
-            for (int element : rida) {
-                System.out.print(element + " ");
-            }
-            System.out.println();
-        }
-    }
-
     // mängutsükkel
     public void manguTsukkel(Scanner scanner, String mangijaNimi) throws InterruptedException {
         while (elud > 0) {
-            System.out.println("------------------------------");
+            System.out.println("══════════════════════════════════════════════════════════════════════════════════");
+
             Thread.sleep(500);
             System.out.println("Hetkeskoor: " + skoor + "  Elud: " + "♥ ".repeat(elud) + "♡".repeat(eludMax - elud) + "\n");
             Thread.sleep(500);
             kuvaMaatriks();
             System.out.println();
-            kuvaMaatriks2();
-
-            // sündmus käivitatakse, kui mängija asukohal on märgitud peidetud maatriskis "1" ehk sündmus
-            if (andmeMaatriks[asukohtX][asukohtY] == 1 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
-                andmeMaatriks[asukohtX][asukohtY] = 0;
-                int eventNum = new Random().nextInt(3) + 1;
-                executeEvent(eventNum);
-            } else if (andmeMaatriks[asukohtX][asukohtY] == 0 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
-                Raskustase_1.juhusundmus();
-            }
-
-            System.out.println("------------------------------\n");
 
             System.out.println("Kuhu soovid liikuda? (w - üles, s - alla, a - vasakule, d - paremale)");
             char liigu = scanner.next().charAt(0);
@@ -88,17 +68,25 @@ public abstract class Maatriks {
                 break;
             }
             liiguta(ekraaniMaatriks, liigu);
+
+            // sündmus käivitatakse, kui mängija asukohal on märgitud peidetud maatriskis "1" ehk sündmus
+            if (andmeMaatriks[asukohtX][asukohtY] == 1 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
+                andmeMaatriks[asukohtX][asukohtY] = 0;
+                int eventNum = new Random().nextInt(14) + 1;
+                executeEvent(eventNum);
+            } else if (andmeMaatriks[asukohtX][asukohtY] == 0 && ekraaniMaatriks[asukohtX][asukohtY] == 'M') {
+                Sundmused.juhusundmus();
+            }
+            System.out.println();
+
         }
         System.out.println("\nMäng läbi! Sinu lõppskoor: " + skoor);
+        Main.uuendaSkoori(mangijaNimi, skoor);
+
     }
 
     public static void liiguta(char[][] kaart, char suund) {
-        /**
-         * Kontrollib kas liikumine on sobiv (ei liigu üle kaardi piiride), ja kui kasutaja sisestus
-         * on õige (w,s,a,d) siis liigutab mängijat ühe võrra soovitud suunas.
-         * @param kaart antud kaart.
-         * @param suund kasutaja sisestus (w,s,a,d)
-         */
+        //Liigutab mängijat sisestatud suunas
         int uusX = asukohtX, uusY = asukohtY;
 
         switch (suund) {
@@ -130,25 +118,11 @@ public abstract class Maatriks {
     }
 
     public static boolean onSobivLiikumine(char[][] kaart, int x, int y) {
-        /**
-         * Kontrollib kas liikumine on sobiv (ei liigu üle kaardi piiride).
-         * @param kaart antud kaart.
-         * @param x suund vasakult-paremale
-         * @param y suund ülevalt-alla
-         * @return tagastab true, kui liikumine õige ja false, kui liikumine on vale.
-         */
+        // kontrollib, kas liikumine jääb kaardi mõõtmete sisse
         return x >= 0 && x < kaart.length && y >= 0 && y < kaart[0].length;
     }
 
     // meetod sobiva sündmuse käivitamiseks
     public abstract void executeEvent(int eventNum) throws InterruptedException;
-
-    public void tuvastaSundmus() {
-        for (int i = 0; ; i++) {
-
-        }
-
-
-    }
 
 }
