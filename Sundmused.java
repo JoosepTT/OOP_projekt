@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class Sundmused {
@@ -21,7 +20,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nJäid seekord vastasele alla!");
+            System.out.println("\nJäid seekord vastasele alla!");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -60,7 +59,7 @@ public class Sundmused {
             System.out.println("\nPõgenesid edukalt!");
 
         } else {
-            System.out.print("\nJäid seekord vastasele alla!");
+            System.out.println("\nJäid seekord vastasele alla!");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -89,7 +88,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSisimas tahtsid sa nõiale vastu hakkata aga seekord jäi sul julgusest puudu.");
+            System.out.println("\nSisimas tahtsid sa nõiale vastu hakkata aga seekord jäi sul julgusest puudu.");
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
         }
@@ -113,7 +112,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSul läks varjualuse leidmisega liialt kaua aega ja su nahk kannatas happe vihma käes liiga kaua.");
+            System.out.println("\nSul läks varjualuse leidmisega liialt kaua aega ja su nahk kannatas happe vihma käes liiga kaua.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -132,7 +131,7 @@ public class Sundmused {
         Thread.sleep(500);
         System.out.println("Majas kohtasid sa ühte küürakat vanameest, kes su endaga ühte mängu mängima kutsus.");
         Thread.sleep(1500);
-        System.out.print("Selleks et vanameest mängus võita ja oma skoori mitte kaotada pead sa kokku saama järgmise kombinatsiooni: ");
+        System.out.print("\nSelleks et vanameest mängus võita ja oma skoori mitte kaotada pead sa kokku saama järgmise kombinatsiooni: ");
         Thread.sleep(500);
 
         for (char sümbol : nõutud) {
@@ -156,7 +155,7 @@ public class Sundmused {
             System.out.println("\nViisid vanamehe tähelepanu mujale ja põgenesid majast!");
 
         } else {
-            System.out.print("\nSa kaotasid mängus vanamehele.");
+            System.out.println("\nSa kaotasid mängus vanamehele.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Maatriks.skoor -= võidupunktid * punktiKordaja;
@@ -183,7 +182,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSinusugune väike inimene ei saa kahe suure trolli vastu.");
+            System.out.println("\nSinusugune väike inimene ei saa kahe suure trolli vastu.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -310,7 +309,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nOma praeguses vormis on see võimatu, et sa vargale järgi jõuaksid. Peaksid rohkem trennile pühenduma.");
+            System.out.println("\nOma praeguses vormis on see võimatu, et sa vargale järgi jõuaksid. Peaksid rohkem trennile pühenduma.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Maatriks.skoor -= võidupunktid * punktiKordaja;
@@ -339,7 +338,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSa ei olnud piisavalt kiire ja pidid kannatama paari luukerede rünnakut ennem, kui sa pääsesid.");
+            System.out.println("\nSa ei olnud piisavalt kiire ja pidid kannatama paari luukerede rünnakut ennem, kui sa pääsesid.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -354,9 +353,9 @@ public class Sundmused {
         Thread.sleep(500);
         System.out.println("Kuuled enda ümber vihma puudelehtedele langemas ja öökullide huikamist.");
         Thread.sleep(500);
-        System.out.println("\nJärsku oled silmitsi suure ja musta karuga. Viimase asjana näed sa tema punaseid helendavaid silmi ennem, kui ta sinu poole sööstab.");
+        System.out.println("Järsku oled silmitsi suure ja musta karuga. Viimase asjana näed sa tema punaseid helendavaid silmi ennem, kui ta sinu poole sööstab.");
         Thread.sleep(1500);
-        System.out.println("Karuga otsene võitlus on kasutu, nii et pead kiiresti mõtlema, kuidas sa sellest olukorrast pääsed: \n ");
+        System.out.println("\nKaruga otsene võitlus on kasutu, nii et pead kiiresti mõtlema, kuidas sa sellest olukorrast pääsed: \n ");
         Thread.sleep(500);
 
         int tulemus = Taring.veereta(3);
@@ -368,7 +367,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSul puudus piisaval hulgal intelligentsi, et midagi võimalikult kiiresti välja mõelda.");
+            System.out.println("\nSul puudus piisaval hulgal intelligentsi, et midagi võimalikult kiiresti välja mõelda.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
@@ -407,7 +406,7 @@ public class Sundmused {
             System.out.println("\nSa põgenesid kõrtsist.");
 
         } else {
-            System.out.print("\nSa ei julgenud vastu hakkata ja loovutasid osa oma kullast.");
+            System.out.println("\nSa ei julgenud vastu hakkata ja loovutasid osa oma kullast.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Maatriks.skoor -= võidupunktid * punktiKordaja;
@@ -444,7 +443,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nSee supp mille sa kokku keetsid ei sobi isegi põranda pesemiseks ja sa vigastasid ennast selle tegemise käigus.");
+            System.out.println("\nSee supp mille sa kokku keetsid ei sobi isegi põranda pesemiseks ja sa vigastasid ennast selle tegemise käigus.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Thread.sleep(500);
@@ -464,7 +463,7 @@ public class Sundmused {
         Thread.sleep(500);
         System.out.println("Seisad keset areeni, silmad keskendunud vastasele sinu ees.");
         Thread.sleep(1500);
-        System.out.println("Vastase võitmiseks pead oma võitlemis oskuse proovile panema.\n ");
+        System.out.println("Vastase võitmiseks pead oma võitlemisoskuse proovile panema.\n ");
         Thread.sleep(500);
 
         int tulemus = Taring.veereta(3);
@@ -476,7 +475,234 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.print("\nKaotasid vastasele haledalt.");
+            System.out.println("\nKaotasid vastasele haledalt.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid ühe elu.");
+            Maatriks.elud -= 1;
+            Maatriks.skoor -= võidupunktid * punktiKordaja;
+        }
+        Thread.sleep(500);
+    }
+
+    public void sundmus_15(int punktiKordaja) throws InterruptedException {
+        int võidupunktid = 7;
+        char[] nõutud = {'☘', '⚘', '☀', '✠'};
+        char[] alternatiiv = {'⚘', '⚘', '⚘'};
+
+        System.out.println("\nOled pakkimas lahti oma telki ning kuuled künka tagant tuttavaid hõikeid."); // sündmuse kirjeldus
+        System.out.println("Jätsid oma varustuse ja tegemised katki ning läksid uurima, kes sind hüüab.");
+        Thread.sleep(500);
+        System.out.println("Teie pilgud kohtuvad, kuid on juba hilja: näed, et tegemist on teise rännumehega, kelle käest sa olid varastanud katla.");
+        Thread.sleep(1500);
+        System.out.print("Kättemaksujanulise matkaselli alistamiseks pead ta ilma oma varsutuse abi kasutmata maha murdma: ");
+        Thread.sleep(500);
+        for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        int tulemus = Taring.veeretaSymbol(5, nõutud, alternatiiv);
+        if (tulemus == 1) {
+            System.out.println("\nSuutsid rebida vastaselt toika ja ta oma enda relvaga läbi vemmeldada.");
+            Thread.sleep(500);
+            System.out.println("Said juurde " + võidupunktid * punktiKordaja + " punkti.");
+            Maatriks.skoor += punktiKordaja * võidupunktid;
+
+        } else if (tulemus == 2) {
+            System.out.println("\nSuutsid puude vahel põigates jälitaja maha raputada, kuid jäid oma varustusest ilma.");
+
+        } else {
+            System.out.println("\nVastane suutis su lukustada enda haardesse ja anda vastava karistuse.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid ühe elu.");
+            Maatriks.elud -= 1;
+            Maatriks.skoor -= võidupunktid * punktiKordaja;
+        }
+        Thread.sleep(500);
+    }
+
+    public void sundmus_16(int punktiKordaja) throws InterruptedException {
+        int võidupunktid = 7;
+        char[] nõutud = {'✜', '✜', '✜', '✠'};
+        char[] alternatiiv = {'⚘', '⚘', '⚘'};
+
+        System.out.println("\nSadas mitu päeva vihma ning su varustus sai läbimärjaks."); // sündmuse kirjeldus
+        Thread.sleep(500);
+        System.out.println("Päike on loojunud ja rohumaal kumab jahe udu. Külm õhk poeb vaikselt su kontidesse, kuna riided ei hoia enam sooja.");
+        Thread.sleep(1500);
+        System.out.print("Pead palvetama, kas sa oled hommikul veel elus või oled selleks ajaks juba alajahtunud: ");
+        Thread.sleep(500);
+        for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        int tulemus = Taring.veeretaSymbol(5, nõutud, alternatiiv);
+        if (tulemus == 1) {
+            System.out.println("\nSuutisid süüdata märjad puud ja teha lõkke, et end soojas hoida.");
+            Thread.sleep(500);
+            System.out.println("Said juurde " + võidupunktid * punktiKordaja + " punkti.");
+            Maatriks.skoor += punktiKordaja * võidupunktid;
+
+        } else if (tulemus == 2) {
+            System.out.println("\nÖö oli tuulevaikne ja suutsid märja lina vahel oma kehasoojust hoida, kuid hommikuks olid kopsupõletikus"); // põgenemisel ei kaota midagi, kuid punkte ka ei saa
+
+        } else {
+            System.out.println("\nÖösel tõusis tuul ja enam sa ei ärganud.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid ühe elu.");
+            Maatriks.elud -= 1;
+            Maatriks.skoor -= võidupunktid * punktiKordaja;
+        }
+        Thread.sleep(500);
+    }
+
+    public void sundmus_17(int punktiKordaja) throws InterruptedException {
+        int võidupunktid = 7;
+        char[] nõutud = {'☘', '☘', '☀', '☀'};
+        char[] alternatiiv = {'⚘', '⚘', '⚘'};
+
+        System.out.println("\nAitasid sõbralikel külameestel kaste kaubikusse laaduda, kui korraga ilmus teie ette korravalvuri sõiduk."); // sündmuse kirjeldus
+        Thread.sleep(500);
+        System.out.println("Korravalvur manitseb kõnnitee blokeerimise pärast ja küsib kõikide kohalviibijate dokumente, kuid avastab juhtumisi kastidest keelatud salakuba");
+        Thread.sleep(1500);
+        System.out.print("Pead võistlema teiste huligaanidega, et põgenemisbussis enne kiiret ärasõimist kohta saada: ");
+        Thread.sleep(500);
+        for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        int tulemus = Taring.veeretaSymbol(5, nõutud, alternatiiv);
+        if (tulemus == 1) {
+            System.out.println("\nPanid ühele huligaanile jala ette ja said tema asemel kaubiku viimasele vabale istekohale.");
+            Thread.sleep(500);
+            System.out.println("Said juurde " + võidupunktid * punktiKordaja + " punkti.");
+            Maatriks.skoor += punktiKordaja * võidupunktid;
+
+        } else if (tulemus == 2) {
+            System.out.println("\nSuutsid teiste meeste paanika ja rapsimise varjus salaja põõsa taha peitu pugeda."); // põgenemisel ei kaota midagi, kuid punkte ka ei saa
+
+        } else {
+            System.out.println("\nAuto täitus kiiresti ja uksed löödi su näo ees järsult kinni. Korravalvur arreteeris su.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid ühe elu.");
+            Maatriks.elud -= 1;
+            Maatriks.skoor -= võidupunktid * punktiKordaja;
+        }
+        Thread.sleep(500);
+    }
+
+    public void sundmus_18(int punktiKordaja) throws InterruptedException {
+        int võidupunktid = 7;
+        char[] nõutud = {'✜', '★', '☀', '☀'};
+        char[] alternatiiv = {'⚘', '⚘', '⚘'};
+
+        System.out.println("\nJõuad vanasse varemetesse, kui järsku kuuled õhus müstilist sosinat."); // sündmuse kirjeldus
+        Thread.sleep(500);
+        System.out.println("Uudishimu sunnib sind hääle allikat otsima.");
+        Thread.sleep(500);
+        System.out.println("Sinu ette ilmub tume kogu – see on needuse all kannatav sõdalane.");
+        Thread.sleep(1500);
+        System.out.print("Ellujäämiseks pead temaga duelli pidama: ");
+        Thread.sleep(500);
+        for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        int tulemus = Taring.veeretaSymbol(5, nõutud, alternatiiv);
+        if (tulemus == 1) {
+            System.out.println("\nSuutsid needuse kanda temale tagasi ja pääsesid võitjana.");
+            Thread.sleep(500);
+            System.out.println("Said juurde " + võidupunktid * punktiKordaja + " punkti.");
+            Maatriks.skoor += punktiKordaja * võidupunktid;
+
+        } else if (tulemus == 2) {
+            System.out.println("\nSul õnnestus varjudes peitu pugeda."); // põgenemisel ei kaota midagi, kuid punkte ka ei saa
+
+        } else {
+            System.out.println("\nSõdalane neelas su hinge ja sa kaotasid väärtuslikku energiat.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid ühe elu.");
+            Maatriks.elud -= 1;
+            Maatriks.skoor -= võidupunktid * punktiKordaja;
+        }
+        Thread.sleep(500);
+    }
+
+    public void sundmus_19(int punktiKordaja) throws InterruptedException {
+        int võidupunktid = 7;
+        char[] nõutud = {'★', '✠', '☀', '✠'};
+        char[] alternatiiv = {'⚘', '⚘', '⚘'};
+
+        System.out.println("\nLeiad tee äärest vana kirstu, mis on pooleldi maasse vajunud."); // sündmuse kirjeldus
+        Thread.sleep(500);
+        System.out.println("Kui proovid seda avada, haaravad su käed järsku maagilised ketid kinni.");
+        Thread.sleep(1500);
+        System.out.print("Ahelatest vabastamiseks pead murdma ketil lausuva loitsu: ");
+        Thread.sleep(500);
+        for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        int tulemus = Taring.veeretaSymbol(5, nõutud, alternatiiv);
+        if (tulemus == 1) {
+            System.out.println("\nSuutsid loitsu murda ja kirst avanes, paljastades kulda ja väärisesemeid.");
+            Thread.sleep(500);
+            System.out.println("Said juurde " + võidupunktid * punktiKordaja + " punkti.");
+            Maatriks.skoor += punktiKordaja * võidupunktid;
+
+        } else if (tulemus == 2) {
+            System.out.println("\nKettide jõud nõrgenes hetkeks ja sul õnnestus põgeneda, kuid sa ei saanud midagi väärtuslikku."); // põgenemisel ei kaota midagi, kuid punkte ka ei saa
+
+        } else {
+            System.out.println("\nLoits tugevnes ja sa tundsid oma jõudu hääbumas.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
+            Thread.sleep(500);
+            System.out.println(" - Kaotasid ühe elu.");
+            Maatriks.elud -= 1;
+            Maatriks.skoor -= võidupunktid * punktiKordaja;
+        }
+        Thread.sleep(500);
+    }
+
+    public void sundmus_20(int punktiKordaja) throws InterruptedException {
+        int võidupunktid = 7;
+        char[] nõutud = {'★', '☘', '☀', '⚘'};
+        char[] alternatiiv = {'⚘', '⚘', '⚘'};
+
+        System.out.println("\nKõnnid üle rippuva köiesilla, kui järsku üks planguke jalge all murdub."); // sündmuse kirjeldus
+        Thread.sleep(500);
+        System.out.println("Sa haarad instinktiivselt lähimast köiest kinni.");
+        Thread.sleep(500);
+        System.out.println("Kuid sild hakkab lagunema ja pead kiiresti tegutsema!");
+        Thread.sleep(1500);
+        System.out.print("Ellujäämiseks pead kiiresti haarama lähimast esemest: ");
+        Thread.sleep(500);
+        for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        int tulemus = Taring.veeretaSymbol(5, nõutud, alternatiiv);
+        if (tulemus == 1) {
+            System.out.println("\nSul õnnestus köiest kinni hoida ja üles ronida – oled pääsenud!");
+            Thread.sleep(500);
+            System.out.println("Said juurde " + võidupunktid * punktiKordaja + " punkti.");
+            Maatriks.skoor += punktiKordaja * võidupunktid;
+
+        } else if (tulemus == 2) {
+            System.out.println("\nSuutsid üle noatera teisele poole jõuda, kuid oled kergelt viga saanud."); // põgenemisel ei kaota midagi, kuid punkte ka ei saa
+
+        } else {
+            System.out.println("\nKöis libises su käest ja sa kukkusid sügavikku.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Thread.sleep(500);
@@ -493,12 +719,22 @@ public class Sundmused {
         // Sündmuste map: võtmed on sündmuste kirjeldused, väärtusteks on {elukaotus, punktimuutus}
         Map<String, int[]> juhusundmused = new LinkedHashMap<>();
         juhusundmused.put("Said hammustada ja kaotasid elu.", new int[]{-1, -1});
-        juhusundmused.put("Leidsid varanduse! Said juurde mõned punktid.", new int[]{0, 5});
+        juhusundmused.put("Leidsid varanduse! Said juurde mõned punktid.", new int[]{0, 3});
         juhusundmused.put("Komistasid ja kaotasid punkti.", new int[]{0, -2});
-        juhusundmused.put("Said maagilise amuleti! Said juurde alusid ja punkte", new int[]{1, 3});
-        juhusundmused.put("Kukkusid auku ja kulutasid palju aega välja kaevamisele. Kaotasid punkti.", new int[]{0, 5});
+        juhusundmused.put("Said maagilise amuleti! Said juurde elusid ja punkte", new int[]{1, 3});
+        juhusundmused.put("Kukkusid auku ja kulutasid palju aega välja kaevamisele. Kaotasid punkte.", new int[]{0, -3});
         juhusundmused.put("Puhkasid veidi oma jalgu ja siis liikusid edasi.", new int[]{0, 0});
         juhusundmused.put("Ehmatasid korraks, sest arvasid, et keegi jälitab sind. See oli kõigest sinu vari.", new int[]{0, 0});
+        juhusundmused.put("Komistasid juurika otsa ja vigastasid end veidi.", new int[]{0, -3});
+        juhusundmused.put("Leidsid peidetud ravipaki ja parandasid oma haavu.", new int[]{1, 0});
+        juhusundmused.put("Kohtasid sõbralikku kaupmeest, kes andis sulle kingituse.", new int[]{0, 3});
+        juhusundmused.put("Astusid lõksu ja kaotasid väärtuslikku aega.", new int[]{0, -4});
+        juhusundmused.put("Avastasid iidse templi ja said selle saladustest inspiratsiooni.", new int[]{0, 2});
+        juhusundmused.put("Sind ründas metsloom, kuid pääsesid napilt, kaotades elu.", new int[]{-1, 0});
+        juhusundmused.put("Jõid allikast puhast vett ja tunned end värskena.", new int[]{0, 0});
+        juhusundmused.put("Eksisid rajalt ja pidid tegema lisaringi.", new int[]{0, -4});
+        juhusundmused.put("Aitasid hätta sattunud reisijat ja said tänutäheks mõned punktid.", new int[]{0, 2});
+        juhusundmused.put("Leidsid maagilise relva, mis annab sulle jõudu!", new int[]{1, 1});
 
         // Valitakse suvaline sündmus
         List<String> võtmed = new ArrayList<>(juhusundmused.keySet());
