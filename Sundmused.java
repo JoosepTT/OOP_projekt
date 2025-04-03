@@ -131,7 +131,7 @@ public class Sundmused {
         Thread.sleep(500);
         System.out.println("Majas kohtasid sa ühte küürakat vanameest, kes su endaga ühte mängu mängima kutsus.");
         Thread.sleep(1500);
-        System.out.print("\nSelleks et vanameest mängus võita ja oma skoori mitte kaotada pead sa kokku saama järgmise kombinatsiooni: ");
+        System.out.print("\nSelleks et vanameest mängus võita ja oma punkte mitte kaotada, pead sa kokku saama järgmise kombinatsiooni: ");
         Thread.sleep(500);
 
         for (char sümbol : nõutud) {
@@ -158,7 +158,7 @@ public class Sundmused {
             System.out.println("\nSa kaotasid mängus vanamehele.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -203,12 +203,12 @@ public class Sundmused {
         Thread.sleep(1500);
         System.out.print("Esimene võimalus on sul enda veetlevat karismat kasutada ja jutuga nad ära ajada: ");
         Thread.sleep(500);
-
         for (char sümbol : nõutud) {
             System.out.print("[" + sümbol + "] ");
         }
-        System.out.print("\nTeine võimalus on nad siit maapealt lihtsalt eemaldada: ");
 
+        Thread.sleep(500);
+        System.out.print("\nTeine võimalus on nad siit maapealt lihtsalt eemaldada: ");
         for (char sümbol : alternatiiv) {
             System.out.print("[" + sümbol + "] ");
         }
@@ -247,12 +247,11 @@ public class Sundmused {
         Thread.sleep(1500);
         System.out.print("\nSelleks, et leida minotauruse kodu, pead sa ta maha rahustama ja oma dektektiivi oskuse proovile panema: ");
         Thread.sleep(500);
-
         for (char sümbol : nõutud) {
             System.out.print("[" + sümbol + "] ");
         }
-        System.out.print("\nSul on ka võimalus teda lihtsalt ignoreerida, kuid sellega kaasneb võimalus, et ta läheb närvi ja lööb sind. ");
 
+        System.out.print("\nSul on ka võimalus teda lihtsalt ignoreerida, kuid sellega kaasneb võimalus, et ta läheb närvi ja lööb sind. ");
         for (char sümbol : alternatiiv) {
             System.out.print("[" + sümbol + "] ");
         }
@@ -312,7 +311,7 @@ public class Sundmused {
             System.out.println("\nOma praeguses vormis on see võimatu, et sa vargale järgi jõuaksid. Peaksid rohkem trennile pühenduma.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -389,8 +388,9 @@ public class Sundmused {
         for (char sümbol : nõutud) {
             System.out.print("[" + sümbol + "] ");
         }
-        System.out.print("\nNende tähelepanu hajutamiseks ja põgenemiseks: ");
 
+        Thread.sleep(500);
+        System.out.print("\nNende tähelepanu hajutamiseks ja põgenemiseks: ");
         for (char sümbol : alternatiiv) {
             System.out.print("[" + sümbol + "] ");
         }
@@ -409,7 +409,7 @@ public class Sundmused {
             System.out.println("\nSa ei julgenud vastu hakkata ja loovutasid osa oma kullast.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -417,15 +417,21 @@ public class Sundmused {
     public void sundmus_13(int punktiKordaja) throws InterruptedException {
         int võidupunktid = 5;
         char[] nõutud = {'⚘', '⚘', '☀'};
-        char[] alternatiiv = {'★', '★', '★', '★', '★'};
+        char[] alternatiiv = {'★', '★', '★', '★'};
 
         System.out.println("\nOled oma laagri üles seadnud ja valmistud tulevaseks päevaks."); // sündmuse kirjeldus
         Thread.sleep(500);
         System.out.println("Avasid oma ravimtaimede koti ja sul on plaan teha omale üks tervendav jook.");
         Thread.sleep(1500);
-        System.out.print("Selleks et jook tuleks sooviva toimega, pead sa oma alkeemia oskused tööle panema: ");
+        System.out.print("Selleks et jook tuleks soovitava toimega, pead sa oma alkeemia oskused tööle panema: ");
         Thread.sleep(500);
         for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        Thread.sleep(500);
+        System.out.print("\nJoogist loobumiseks pead saama kokku vajalikud vahendid: ");
+        for (char sümbol : alternatiiv) {
             System.out.print("[" + sümbol + "] ");
         }
 
@@ -443,13 +449,13 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else {
-            System.out.println("\nSee supp mille sa kokku keetsid ei sobi isegi põranda pesemiseks ja sa vigastasid ennast selle tegemise käigus.");
+            System.out.println("\nSupp mille sa kokku keetsid ei sobi isegi põranda pesemiseks ja sa vigastasid ennast selle tegemise käigus.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid " + võidupunktid * punktiKordaja + " punkti.");
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -481,7 +487,7 @@ public class Sundmused {
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -502,6 +508,12 @@ public class Sundmused {
             System.out.print("[" + sümbol + "] ");
         }
 
+        Thread.sleep(500);
+        System.out.print("\nVastaste eest põgenemiseks pead saama kokku vajalikud vahendid: ");
+        for (char sümbol : alternatiiv) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
         int tulemus = Taring.veeretaSymbol(5, nõutud, alternatiiv);
         if (tulemus == 1) {
             System.out.println("\nSuutsid rebida vastaselt toika ja ta oma enda relvaga läbi vemmeldada.");
@@ -519,7 +531,7 @@ public class Sundmused {
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -533,9 +545,15 @@ public class Sundmused {
         Thread.sleep(500);
         System.out.println("Päike on loojunud ja rohumaal kumab jahe udu. Külm õhk poeb vaikselt su kontidesse, kuna riided ei hoia enam sooja.");
         Thread.sleep(1500);
-        System.out.print("Pead palvetama, kas sa oled hommikul veel elus või oled selleks ajaks juba alajahtunud: ");
+        System.out.print("Pead palvetama, et suudad süüdata niisked halud, muidu oled hommikuks juba alajahtunud: ");
         Thread.sleep(500);
         for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        Thread.sleep(500);
+        System.out.print("\nKehasoojuse hoidmiseks pead leidma vajalikud vähegi kehasoojust hoidvad vahendid: ");
+        for (char sümbol : alternatiiv) {
             System.out.print("[" + sümbol + "] ");
         }
 
@@ -556,7 +574,7 @@ public class Sundmused {
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -573,6 +591,12 @@ public class Sundmused {
         System.out.print("Pead võistlema teiste huligaanidega, et põgenemisbussis enne kiiret ärasõimist kohta saada: ");
         Thread.sleep(500);
         for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        Thread.sleep(500);
+        System.out.print("\nValvuri eest põgenemiseks pead saama kokku vajalikud vahendid: ");
+        for (char sümbol : alternatiiv) {
             System.out.print("[" + sümbol + "] ");
         }
 
@@ -593,7 +617,7 @@ public class Sundmused {
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -615,6 +639,12 @@ public class Sundmused {
             System.out.print("[" + sümbol + "] ");
         }
 
+        Thread.sleep(500);
+        System.out.print("\nVastaste eest põgenemiseks pead saama kokku vajalikud vahendid: ");
+        for (char sümbol : alternatiiv) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
         int tulemus = Taring.veeretaSymbol(5, nõutud, alternatiiv);
         if (tulemus == 1) {
             System.out.println("\nSuutsid needuse kanda temale tagasi ja pääsesid võitjana.");
@@ -632,7 +662,7 @@ public class Sundmused {
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -644,11 +674,17 @@ public class Sundmused {
 
         System.out.println("\nLeiad tee äärest vana kirstu, mis on pooleldi maasse vajunud."); // sündmuse kirjeldus
         Thread.sleep(500);
-        System.out.println("Kui proovid seda avada, haaravad su käed järsku maagilised ketid kinni.");
+        System.out.println("Kui proovid seda avada, haaravad su kätest järsku kinni maagilised ketid.");
         Thread.sleep(1500);
-        System.out.print("Ahelatest vabastamiseks pead murdma ketil lausuva loitsu: ");
+        System.out.print("Ahelatest vabanemiseks pead murdma ketil lausuva loitsu: ");
         Thread.sleep(500);
         for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        Thread.sleep(500);
+        System.out.print("\nAhelatest lahrirabelemiseks ja põgenemiseks pead saama kokku vajalikud vahendid: ");
+        for (char sümbol : alternatiiv) {
             System.out.print("[" + sümbol + "] ");
         }
 
@@ -660,7 +696,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else if (tulemus == 2) {
-            System.out.println("\nKettide jõud nõrgenes hetkeks ja sul õnnestus põgeneda, kuid sa ei saanud midagi väärtuslikku."); // põgenemisel ei kaota midagi, kuid punkte ka ei saa
+            System.out.println("\nKettide jõud nõrgenes hetkeks ja sul õnnestus põgeneda, kuid kirst jäi suletuks ja sa ei saanud midagi väärtuslikku."); // põgenemisel ei kaota midagi, kuid punkte ka ei saa
 
         } else {
             System.out.println("\nLoits tugevnes ja sa tundsid oma jõudu hääbumas.");
@@ -669,7 +705,7 @@ public class Sundmused {
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -685,9 +721,15 @@ public class Sundmused {
         Thread.sleep(500);
         System.out.println("Kuid sild hakkab lagunema ja pead kiiresti tegutsema!");
         Thread.sleep(1500);
-        System.out.print("Ellujäämiseks pead kiiresti haarama lähimast esemest: ");
+        System.out.print("Ellujäämiseks pead kiiresti haarama lähimast köiest: ");
         Thread.sleep(500);
         for (char sümbol : nõutud) {
+            System.out.print("[" + sümbol + "] ");
+        }
+
+        Thread.sleep(500);
+        System.out.print("\nKukkumisest pääasemiseks pead haarama ükskõik millest, isegi kui see teeb sulle viga: ");
+        for (char sümbol : alternatiiv) {
             System.out.print("[" + sümbol + "] ");
         }
 
@@ -699,7 +741,7 @@ public class Sundmused {
             Maatriks.skoor += punktiKordaja * võidupunktid;
 
         } else if (tulemus == 2) {
-            System.out.println("\nSuutsid üle noatera teisele poole jõuda, kuid oled kergelt viga saanud."); // põgenemisel ei kaota midagi, kuid punkte ka ei saa
+            System.out.println("\nSuutsid üle noatera teisele poole silda jõuda, kuid oled kergelt viga saanud."); // põgenemisel ei kaota midagi, kuid punkte ka ei saa
 
         } else {
             System.out.println("\nKöis libises su käest ja sa kukkusid sügavikku.");
@@ -708,7 +750,7 @@ public class Sundmused {
             Thread.sleep(500);
             System.out.println(" - Kaotasid ühe elu.");
             Maatriks.elud -= 1;
-            Maatriks.skoor -= võidupunktid * punktiKordaja;
+            Maatriks.skoor = Math.max(0, Maatriks.skoor - võidupunktid * punktiKordaja);
         }
         Thread.sleep(500);
     }
@@ -747,10 +789,10 @@ public class Sundmused {
 
     public static void valjastaJuhuslik(String sündmus, int[] väärtused) {
         System.out.println(sündmus);
-        if (väärtused[0] > 0 && Maatriks.elud == 3) Maatriks.skoor += väärtused[1];
-        else Maatriks.elud += väärtused[0];
-        Maatriks.skoor += väärtused[1];
+        
+        Maatriks.elud = Math.max(0, Maatriks.elud + väärtused[0]);
+        Maatriks.skoor = Math.max(0, Maatriks.skoor + väärtused[1]);
 
-        System.out.println("Mõju: Elud " + väärtused[0] + ", Skoor " + väärtused[1]);
+        System.out.println("Mõju: Elud " + väärtused[0] + ", Punktid " + väärtused[1]);
     }
 }
