@@ -50,6 +50,24 @@ public class Raskustase_1 extends Maatriks {
             case 14:
                 sundmused.sundmus_14(1);
                 break;
+            case 15:
+                sundmused.sundmus_15(1);
+                break;
+            case 16:
+                sundmused.sundmus_16(1);
+                break;
+            case 17:
+                sundmused.sundmus_17(1);
+                break;
+            case 18:
+                sundmused.sundmus_18(1);
+                break;
+            case 19:
+                sundmused.sundmus_19(1);
+                break;
+            case 20:
+                sundmused.sundmus_20(1);
+                break;
         }
     }
 }
